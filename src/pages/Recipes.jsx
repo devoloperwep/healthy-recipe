@@ -161,7 +161,7 @@ function Recipes() {
                         Cook: {product.cookMinutes}
                       </p>
                     </div>
-                    <button className="btn product__list-button">
+                    <button className="product__list-button">
                       View Recipe
                     </button>
                   </li>
