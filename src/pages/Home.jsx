@@ -18,11 +18,11 @@ function Home() {
           <picture>
             <source
               media="(max-width: 500px)"
-              srcSet="./src/assets/images/image-home-hero-small.webp"
+              srcSet="src/assets/images/image-home-hero-small.webp"
             />
             <img
               className="discover__image"
-              src="./src/assets/images/image-home-hero-large.webp"
+              src="src/assets/images/image-home-hero-large.webp"
               height={530}
             />
           </picture>
