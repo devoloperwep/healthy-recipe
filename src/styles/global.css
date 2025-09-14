@@ -20,6 +20,7 @@ body,
   font-weight: 500;
   font-size: var(--font-6-size);
   color: var(--neutral-900);
+  background-color: var(--neutral-100);
 }
 main {
   flex-grow: 1;

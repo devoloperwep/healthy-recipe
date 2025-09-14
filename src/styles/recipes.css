@@ -1,0 +1,220 @@
+/* hero */
+.hero__container {
+  text-align: center;
+}
+.hero__title {
+  margin-top: 8rem;
+  font-size: var(--font-2-size);
+  margin-bottom: 1.2rem;
+}
+.hero__description {
+  margin-bottom: 6.4rem;
+}
+
+/* products */
+.products {
+  margin-bottom: 9.7rem;
+}
+.dropdown__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 2.4rem;
+}
+.dropdown__wrapper {
+  display: flex;
+  gap: 2rem;
+}
+.dropdown {
+  position: relative;
+}
+.dropdown-btn {
+  padding: 0.8rem 1.2rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #fff;
+  cursor: pointer;
+  min-width: 180px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-nunito);
+  color: var(--neutral-900);
+  font-weight: 600;
+  font-size: 1.8rem;
+}
+.dropdown-btn::after {
+  content: "";
+  background-image: url("/images/icon-chevron-down.svg");
+  width: 20px;
+  height: 20px;
+}
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 0.6rem;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  min-width: 180px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+}
+.dropdown-option {
+  padding: 1rem 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  cursor: pointer;
+  font-size: 1.4rem;
+}
+.dropdown-option:hover {
+  background: #f5f5f5;
+}
+.clear-btn {
+  padding: 1rem;
+  border: none;
+  background: #f9f9f9;
+  border-top: 1px solid #ddd;
+  cursor: pointer;
+  font-size: 1.4rem;
+  text-align: left;
+  border-radius: 0 0 8px 8px;
+}
+.clear-btn:hover {
+  background: #f0f0f0;
+}
+.product__find-input {
+  border-radius: 0.6rem;
+  padding: 1rem 1.5rem;
+  padding-left: 3.5rem;
+  border: none;
+  background: transparent;
+  outline: none;
+  color: var(--neutral-900);
+  font-family: var(--font-nunito);
+  border: 1px solid var(--neutral-900);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-image: url("/images/Vector.svg");
+  background-repeat: no-repeat;
+  background-position: center left 10px;
+  font-size: var(--font-7-size);
+}
+.product__find-input:focus {
+  border: 2px solid var(--neutral-900);
+}
+.loading {
+  font-size: var(--font-1-size);
+  text-align: center;
+  font-family: var(--font-nunito);
+}
+.error {
+  font-size: var(--font-1-tablet-size);
+  font-family: var(--font-nunito);
+  text-align: center;
+  color: red;
+}
+.products__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 4rem;
+}
+.product__item {
+  padding: 0.8rem;
+  border: 1px solid var(--colors-neutral-300, #e0e6e3);
+  border-radius: 1rem;
+  box-shadow: 0px 8px 16px -9px #163a3429;
+}
+.product__list-img {
+  border-radius: 1rem;
+  margin-bottom: 1.6rem;
+}
+.product__list-title {
+  color: var(--neutral-900);
+  font-family: var(--font-nunito);
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-overflow: ellipsis;
+  width: 100%;
+  max-width: 350px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.product__list-description {
+  font-size: var(--font-7-size);
+  margin-bottom: 1.6rem;
+}
+.product__list-servic {
+  width: 250px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.6rem;
+  margin-bottom: 1.6rem;
+}
+.product__list-servic p {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: var(--font-7-size);
+}
+.product__list-button {
+  width: 100%;
+  height: 48px;
+  padding: 0;
+  border-radius: 999px;
+}
+/* responsive 850px */
+@media screen and (max-width: 850px) {
+  /* hero */
+  .hero__container {
+    text-align: start;
+  }
+  .hero__title {
+    margin-top: 6.4rem;
+  }
+  .hero__description {
+    margin-bottom: 4.8rem;
+  }
+  /* products */
+  .products {
+    margin-bottom: 0;
+  }
+  .product__list-img {
+    width: 100%;
+  }
+}
+/* responsive 500px */
+@media screen and (max-width: 500px) {
+  /* hero */
+  .hero__title {
+    margin-top: 4.8rem;
+    font-size: var(--font-2-mobile-size);
+  }
+  /* products */
+  .dropdown__wrapper {
+    flex-direction: column;
+  }
+  .dropdown-menu,
+  .dropdown-btn,
+  .clear-btn {
+    min-width: 80vw;
+    text-align: center; /* tugma texti markazda */
+    justify-content: center;
+  }
+  .dropdown-option {
+    justify-content: center; /* radio va textni o'rtaga keltiradi */
+    text-align: center;
+  }
+  .product__find-input {
+    width: 80vw;
+  }
+  .loading,
+  .error {
+    font-size: var(--font-2-mobile-size);
+  }
+}
