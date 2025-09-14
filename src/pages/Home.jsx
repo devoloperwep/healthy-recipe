@@ -18,11 +18,11 @@ function Home() {
           <picture>
             <source
               media="(max-width: 500px)"
-              srcSet="src/assets/images/image-home-hero-small.webp"
+              srcSet="/images/image-home-hero-small.webp"
             />
             <img
               className="discover__image"
-              src="src/assets/images/image-home-hero-large.webp"
+              src="/images/image-home-hero-large.webp"
               height={530}
             />
           </picture>
@@ -38,7 +38,7 @@ function Home() {
                 className="order__logo"
                 width={60}
                 height={60}
-                src="./src/assets/images/Carrots.svg"
+                src="/images/Carrots.svg"
                 alt=""
               />
               <h3 className="order__subtitle">Whole-food recipes</h3>
@@ -51,7 +51,7 @@ function Home() {
                 className="order__logo"
                 width={60}
                 height={60}
-                src="./src/assets/images/Feature.svg"
+                src="/images/Feature.svg"
                 alt=""
               />
               <h3 className="order__subtitle">Whole-food recipes</h3>
@@ -64,7 +64,7 @@ function Home() {
                 className="order__logo"
                 width={60}
                 height={60}
-                src="./src/assets/images/Search.svg"
+                src="/images/Search.svg"
                 alt=""
               />
               <h3 className="order__subtitle">Whole-food recipes</h3>
@@ -93,11 +93,11 @@ function Home() {
           <picture>
             <source
               media="(max-width: 500px)"
-              srcSet="./src/assets/images/image-home-real-life-small.webp"
+              srcSet="/images/image-home-real-life-small.webp"
             />
             <img
               className="food__image"
-              src="./src/assets/images/image-home-real-life-large.webp"
+              src="/images/image-home-real-life-large.webp"
               width={635}
               height={450}
             />
