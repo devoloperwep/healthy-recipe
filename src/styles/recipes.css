@@ -133,6 +133,7 @@
 .product__list-img {
   border-radius: 1rem;
   margin-bottom: 1.6rem;
+  width: 100%;
 }
 .product__list-title {
   color: var(--neutral-900);
