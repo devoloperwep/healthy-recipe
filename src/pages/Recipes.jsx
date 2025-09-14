@@ -1,16 +1,18 @@
 import React, { useState } from "react";
+import ProductsItem from "../compnents/ProductsItem";
 import { useFetch } from "../hooks/useFetch";
 
 function Recipes() {
-  const { data, isPending, error } = useFetch(
-    "https://json-api.uz/api/project/recipes/recipes"
-  );
-  console.log(data);
+  let url = "https://json-api.uz/api/project/recipes/recipes";
+
+  const { data, isPending, error } = useFetch(url);
 
   const [isOpen, setIsOpen] = useState(false);
   const [selected, setSelected] = useState("");
   const [cookOpen, setCookOpen] = useState(false);
   const [cookSelected, setCookSelected] = useState("");
+  const [search, setSearch] = useState("");
+
   // select 1
   function select1() {
     setSelected("");
@@ -103,6 +105,7 @@ function Recipes() {
               </div>
             </div>
             <input
+              onChange={(e) => setSearch(e.target.value)}
               className="product__find-input"
               type="text"
               name="find"
@@ -111,63 +114,14 @@ function Recipes() {
           </div>
           {isPending && <div className="loading">Loading...</div>}
           {error && <div className="error">{error}</div>}
-          <ul className="products__list">
-            {data &&
-              data.data.map((product) => {
-                return (
-                  <li key={product.id} className="product__item">
-                    <picture>
-                      <source
-                        media="(max-width: 500px)"
-                        srcSet={product.image.small}
-                      />
-                      <img
-                        className="product__list-img"
-                        src={product.image.large}
-                        width={360}
-                        height={300}
-                      />
-                    </picture>
-                    <h4 className="product__list-title">{product.title}</h4>
-                    <p className="product__list-description">
-                      {product.overview}
-                    </p>
-                    <div className="product__list-servic">
-                      <p>
-                        <img
-                          src="/images/user.svg"
-                          alt=""
-                          width="20"
-                          height="20"
-                        />
-                        Servings: {product.servings}
-                      </p>
-                      <p>
-                        <img
-                          src="/images/Timer.svg"
-                          width="20"
-                          height="20"
-                          alt=""
-                        />
-                        Prep: {product.prepMinutes}
-                      </p>
-                      <p>
-                        <img
-                          src="/images/Food3.svg"
-                          alt=""
-                          width="20"
-                          height="20"
-                        />
-                        Cook: {product.cookMinutes}
-                      </p>
-                    </div>
-                    <button className="product__list-button">
-                      View Recipe
-                    </button>
-                  </li>
-                );
-              })}
-          </ul>
+          {data && (
+            <ProductsItem
+              data={data.data}
+              selected={selected}
+              cookSelected={cookSelected}
+              search={search}
+            />
+          )}
         </div>
       </section>
     </>

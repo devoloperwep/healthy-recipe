@@ -172,9 +172,15 @@
   font-size: var(--font-7-size);
   border: none;
   color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .product__list-button:hover {
   background-color: var(--neutral-600);
+}
+.product__list-link {
+  color: #fff;
 }
 /* responsive 850px */
 @media screen and (max-width: 850px) {
