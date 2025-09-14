@@ -1,27 +1,27 @@
-import { useEffect, useState } from "react";
+useEffect(() => {
+  const getData = async () => {
+    try {
+      setIsPending(true);
+      const req = await fetch(url);
 
-export const useFetch = (url) => {
-  const [data, setData] = useState(null);
-  const [error, setError] = useState(null);
-  const [isPending, setIsPending] = useState(false);
+      if (!req.ok) throw new Error(req.statusText);
 
-  useEffect(() => {
-    const getData = async () => {
-      try {
-        setIsPending(true);
-        const req = await fetch(url);
+      const contentType = req.headers.get("content-type");
+      let data;
 
-        if (!req.status == 200) throw new Error(req.statusText);
-        const data = await req.json();
-        setData(data);
-      } catch (error) {
-        setError(error.message);
-        console.log(error.message);
-      } finally {
-        setIsPending(false);
+      if (contentType && contentType.includes("application/json")) {
+        data = await req.json();
+      } else {
+        data = await req.text(); // fallback
       }
-    };
-    getData();
-  }, [url]);
-  return { data, error, isPending };
-};
+
+      setData(data);
+    } catch (error) {
+      setError(error.message);
+      console.log(error.message);
+    } finally {
+      setIsPending(false);
+    }
+  };
+  getData();
+}, [url]);
