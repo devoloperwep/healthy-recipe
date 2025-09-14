@@ -25,11 +25,11 @@ function About() {
             <picture>
               <source
                 media="(max-width: 500px)"
-                srcSet="./src/assets/images/image-about-our-mission-small.webp"
+                srcSet="/images/image-about-our-mission-small.webp"
               />
               <img
                 className="discover__image"
-                src="./src/assets/images/image-about-our-mission-large.webp"
+                src="/images/image-about-our-mission-large.webp"
                 height={600}
                 width="618"
               />
@@ -45,7 +45,7 @@ function About() {
           <ul className="about__list">
             <li className="about__item">
               <img
-                src="./src/assets/images/icon-bullet-point.svg"
+                src="/images/icon-bullet-point.svg"
                 alt=""
                 width="32"
                 height="32"
@@ -62,7 +62,7 @@ function About() {
             </li>
             <li className="about__item">
               <img
-                src="./src/assets/images/icon-bullet-point.svg"
+                src="/images/icon-bullet-point.svg"
                 alt=""
                 width="32"
                 height="32"
@@ -78,7 +78,7 @@ function About() {
             </li>
             <li className="about__item">
               <img
-                src="./src/assets/images/icon-bullet-point.svg"
+                src="/images/icon-bullet-point.svg"
                 alt=""
                 width="32"
                 height="32"
