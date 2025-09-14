@@ -39,6 +39,7 @@
 /* about */
 .about {
   margin-top: 9.6rem;
+  margin-bottom: 9.6rem;
 }
 .about__container {
   display: flex;
@@ -50,6 +51,55 @@
 .about__list {
   width: 100%;
   max-width: 756px;
+}
+.about__item {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+.about__heading {
+  margin-bottom: 1.2rem;
+  font-size: 2.4rem;
+  font-family: var(--font-nunito);
+}
+.about__description {
+  margin-bottom: 4.8rem;
+}
+.about__title-2 {
+  width: 100%;
+  max-width: 376px;
+}
+/* family */
+.family {
+  margin-top: 9.6rem;
+  margin-bottom: 9.6rem;
+}
+.family__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.family__about {
+  width: 100%;
+  max-width: 400px;
+}
+.family__title {
+  font-size: var(--font-2-size);
+  margin-bottom: 2rem;
+}
+.family__description {
+  margin-bottom: 1.2rem;
+}
+.family__list {
+  list-style: disc;
+}
+.family__item {
+  margin-left: 2.5rem;
+  line-height: 150%;
+}
+.family__img {
+  border-radius: 1.6rem;
 }
 
 /* responsive lg */
@@ -67,12 +117,44 @@
   .discover__image {
     width: 100%;
   }
+  /* family */
+  .family__container {
+    flex-direction: column;
+    align-items: start;
+    gap: 4rem;
+  }
+  .family__about {
+    max-width: 100%;
+  }
+  .family__img {
+    width: 100%;
+  }
 }
 
 /* responsive md */
 @media screen and (max-width: 850px) {
   .help {
     margin-top: 6.4rem;
+    margin-bottom: 8rem;
+  }
+  /* about */
+  .about {
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+  }
+  .about__container {
+    flex-direction: column;
+    gap: 4rem;
+  }
+  .about__description {
+    margin-bottom: 3.2rem;
+  }
+  .about__title-2 {
+    max-width: 100%;
+  }
+  /* family */
+  .family {
+    margin-top: 8rem;
     margin-bottom: 8rem;
   }
 }
@@ -87,7 +169,22 @@
     margin-bottom: 4rem;
   }
   /* about */
+  .about {
+    margin-top: 4.8rem;
+    margin-bottom: 4.8rem;
+  }
   .about__title {
+    font-size: var(--font-2-mobile-size);
+  }
+  .about__description {
+    margin-bottom: 2.4rem;
+  }
+  /* family */
+  .family {
+    margin-top: 4.8rem;
+    margin-bottom: 4.8rem;
+  }
+  .family__title {
     font-size: var(--font-2-mobile-size);
   }
 }
