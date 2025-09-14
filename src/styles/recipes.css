@@ -147,6 +147,7 @@
   overflow: hidden;
 }
 .product__list-description {
+  width: 340px;
   font-size: var(--font-7-size);
   margin-bottom: 1.6rem;
 }
