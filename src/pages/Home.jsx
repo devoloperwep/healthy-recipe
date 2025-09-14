@@ -18,7 +18,7 @@ function Home() {
           <picture>
             <source
               media="(max-width: 500px)"
-              srcset="./src/assets/images/image-home-hero-small.webp"
+              srcSet="./src/assets/images/image-home-hero-small.webp"
             />
             <img
               className="discover__image"
@@ -73,6 +73,49 @@ function Home() {
               </p>
             </li>
           </ul>
+        </div>
+      </section>
+      {/*   food */}
+      <section className="food">
+        <div className="container food__container">
+          <div className="food__wrapper">
+            <h2 className="title-text food__title">Built for real life</h2>
+            <p className="food__about">
+              Cooking shouldn’t be complicated. These recipes come in under{" "}
+              <span className="food__about-mark">30 minutes</span> of active
+              time, fit busy schedules, and taste good enough to repeat.
+            </p>
+            <p className="food__description">
+              Whether you’re new to the kitchen or just need fresh ideas, we’ve
+              got you covered.
+            </p>
+          </div>
+          <picture>
+            <source
+              media="(max-width: 500px)"
+              srcSet="./src/assets/images/image-home-real-life-small.webp"
+            />
+            <img
+              className="food__image"
+              src="./src/assets/images/image-home-real-life-large.webp"
+              width={635}
+              height={450}
+            />
+          </picture>
+        </div>
+      </section>
+      {/* recipe */}
+      <section className="recipe">
+        <div className="container recipe__container">
+          <div className="recipe__wrapper">
+            <h1 className="recipes__title title-text">
+              Ready to cook smarter?
+            </h1>
+            <p className="recipes__description">
+              Hit the button, pick a recipe, and get dinner on the table—fast.
+            </p>
+            <button className="btn recipes__btn">Browse recipes</button>
+          </div>
         </div>
       </section>
     </>

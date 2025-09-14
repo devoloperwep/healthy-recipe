@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { NavLink, Outlet } from "react-router-dom";
+import { Link, NavLink, Outlet } from "react-router-dom";
 
 function MainLayout() {
   const [menu, setMenu] = useState(false);
@@ -15,19 +15,31 @@ function MainLayout() {
           />
           <ul className="nav-list">
             <li className="nav-item">
-              <NavLink className="nav-link" to="/">
+              <NavLink
+                onClick={() => setMenu(false)}
+                className="nav-link"
+                to="/"
+              >
                 Home
                 <span className="active-style"></span>
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/about">
+              <NavLink
+                onClick={() => setMenu(false)}
+                className="nav-link"
+                to="/about"
+              >
                 About
                 <span className="active-style"></span>
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/recipes">
+              <NavLink
+                onClick={() => setMenu(false)}
+                className="nav-link"
+                to="/recipes"
+              >
                 Recipes
                 <span className="active-style"></span>
               </NavLink>
@@ -47,17 +59,29 @@ function MainLayout() {
           <nav className="hide-nav">
             <ul className="hide-list">
               <li className="hide-item">
-                <NavLink className="nav-link hide-link" to="/">
+                <NavLink
+                  onClick={() => setMenu(false)}
+                  className="nav-link hide-link"
+                  to="/"
+                >
                   Home
                 </NavLink>
               </li>
               <li className="hide-item">
-                <NavLink className="nav-link hide-link" to="/about">
+                <NavLink
+                  onClick={() => setMenu(false)}
+                  className="nav-link hide-link"
+                  to="/about"
+                >
                   About
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link hide-link" to="/recipes">
+                <NavLink
+                  onClick={() => setMenu(false)}
+                  className="nav-link hide-link"
+                  to="/recipes"
+                >
                   Recipes
                 </NavLink>
               </li>
@@ -74,24 +98,30 @@ function MainLayout() {
           <div className="footer-container">
             <p>Made with ❤️ and 🥑</p>
             <div className="footer-icons">
-              <img
-                width={22}
-                height={22}
-                src="../src/assets/images/icon-instagram.svg"
-                alt=""
-              />
-              <img
-                width={22}
-                height={22}
-                src="../src/assets/images/icon-bluesky.svg"
-                alt=""
-              />
-              <img
-                width={22}
-                height={22}
-                src="../src/assets/images/icon-tiktok.svg"
-                alt=""
-              />
+              <Link to="https://www.instagram.com/">
+                <img
+                  width={22}
+                  height={22}
+                  src="../src/assets/images/icon-instagram.svg"
+                  alt=""
+                />
+              </Link>
+              <Link to="https://www.instagram.com/">
+                <img
+                  width={22}
+                  height={22}
+                  src="../src/assets/images/icon-bluesky.svg"
+                  alt=""
+                />
+              </Link>
+              <Link to="https://www.tiktok.com/">
+                <img
+                  width={22}
+                  height={22}
+                  src="../src/assets/images/icon-tiktok.svg"
+                  alt=""
+                />
+              </Link>
             </div>
           </div>
         </div>

@@ -76,7 +76,7 @@
 
 @media screen and (max-width: 868px) {
   .nav {
-    padding: 3.2rem 2rem;
+    padding: 2.2rem 2rem;
   }
   .btn-recipes,
   .nav-list {
@@ -91,6 +91,6 @@
 }
 @media screen and (max-width: 450px) {
   .nav {
-    padding: 1.6rem 2rem;
+    padding: 1.4rem 1.8rem;
   }
 }

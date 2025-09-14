@@ -90,7 +90,14 @@
 .hidden {
   display: none;
 }
-
+.title-text {
+  font-family: var(--font-nunito);
+  font-weight: 800;
+}
+.desc-text {
+  font-size: var(--font-5-size);
+  color: var(--neutral-600);
+}
 @media screen and (max-width: 768px) {
   .site-logo {
     max-width: 200px;
@@ -100,7 +107,7 @@
     padding: 1.4rem 2.8rem;
   }
 }
-@media screen and (m-width: 450px) {
+@media screen and (max-width: 500px) {
   .site-logo {
     max-width: 160px;
     height: 22px;

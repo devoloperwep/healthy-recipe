@@ -37,12 +37,85 @@
 /* order */
 .order {
   margin-top: 9.6rem;
+  margin-bottom: 19.2rem;
 }
 .order__title {
   text-align: center;
   font-weight: 800;
   font-size: var(--font-2-size);
   font-family: var(--font-nunito);
+  margin-bottom: 4.8rem;
+}
+.order__list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3.2rem;
+}
+.order__item {
+  width: 100%;
+  max-width: 376px;
+}
+.order__logo {
+  margin-bottom: 2.4rem;
+}
+.order__subtitle {
+  font-size: var(--font-3-size);
+  font-family: var(--font-nunito);
+  margin-bottom: 1.2rem;
+}
+/* food */
+.food {
+  margin-bottom: 8.5rem;
+}
+.food__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.food__wrapper {
+  width: 100%;
+  max-width: 510px;
+}
+.food__title {
+  margin-bottom: 2rem;
+  font-size: var(--font-2-size);
+}
+.food__about {
+  margin-bottom: 2rem;
+  color: var(--neutral-600);
+}
+.food__description {
+  color: var(--neutral-600);
+}
+.food__image {
+  border-radius: 1.6rem;
+}
+.food__about-mark {
+  background-image: url("../assets/images/RealLifeBackground.png");
+  background-repeat: no-repeat;
+  background-position: bottom 2px left;
+}
+/* recipe */
+.recipe__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 9.6rem 1rem;
+  background-image: url("../assets/images/CalltoAction.png");
+  background-repeat: no-repeat;
+  background-size: 100% 396px;
+  border-radius: 1.6rem;
+  text-align: center;
+}
+.recipes__title {
+  font-size: var(--font-2-size);
+  margin-bottom: 1.2rem;
+}
+.recipes__description {
+  margin-bottom: 4rem;
 }
 
 /* responsive */
@@ -65,8 +138,33 @@
   /* order */
   .order {
     margin-top: 8rem;
+    margin-bottom: 16rem;
+  }
+  .order__list {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .order__title {
+    font-size: var(--font-2-size);
+  }
+  .order__item {
+    max-width: 100%;
+  }
+  /* food */
+  .food__container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4rem;
+  }
+  .food__image {
+    width: 100%;
+  }
+  /* recipe */
+  .recipe__wrapper {
+    background-size: cover;
   }
 }
+/* media 500px */
 @media screen and (max-width: 500px) {
   /* discover */
   .discover__title {
@@ -75,5 +173,31 @@
   /* order */
   .order {
     margin-top: 6.4rem;
+    margin-bottom: 6.4rem;
+  }
+  .order__title {
+    font-size: var(--font-2-mobile-size);
+    margin-bottom: 3.2rem;
+  }
+  .order__logo {
+    margin-bottom: 2rem;
+  }
+  /* food */
+  .food {
+    margin-bottom: 6.4rem;
+  }
+  .food__wrapper {
+    gap: 3.2rem;
+  }
+  /* recipes */
+  .recipe__wrapper {
+    padding: 8rem 1rem;
+    background: #e9ede8;
+  }
+  .recipes__title {
+    font-size: var(--font-2-mobile-size);
+  }
+  .recipes__description {
+    margin-bottom: 3.2rem;
   }
 }
