@@ -11,7 +11,7 @@ function MainLayout() {
             className="site-logo"
             width={260}
             height={40}
-            src="./src/assets/images/logo.svg"
+            src="/images/logo.svg"
           />
           <ul className="nav-list">
             <li className="nav-item">
@@ -51,7 +51,7 @@ function MainLayout() {
             className="menu-img hidden"
             width={18}
             height={16}
-            src="../src/assets/images/icon-hamburger-menu.svg"
+            src="./images/icon-hamburger-menu.svg"
             alt=""
           />
         </nav>
@@ -102,7 +102,7 @@ function MainLayout() {
                 <img
                   width={22}
                   height={22}
-                  src="../src/assets/images/icon-instagram.svg"
+                  src="/images/icon-instagram.svg"
                   alt=""
                 />
               </Link>
@@ -110,7 +110,7 @@ function MainLayout() {
                 <img
                   width={22}
                   height={22}
-                  src="../src/assets/images/icon-bluesky.svg"
+                  src="/images/icon-bluesky.svg"
                   alt=""
                 />
               </Link>
@@ -118,7 +118,7 @@ function MainLayout() {
                 <img
                   width={22}
                   height={22}
-                  src="../src/assets/images/icon-tiktok.svg"
+                  src="/images/icon-tiktok.svg"
                   alt=""
                 />
               </Link>
