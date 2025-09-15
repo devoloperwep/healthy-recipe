@@ -57,7 +57,7 @@ function Recipes() {
                 </button>
                 {isOpen && (
                   <div className="dropdown-menu">
-                    {[5, 10, 15, 20].map((time) => (
+                    {[0, 5, 10].map((time) => (
                       <label key={time} className="dropdown-option">
                         <input
                           className="custom-radio"
