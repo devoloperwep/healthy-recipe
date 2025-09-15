@@ -123,6 +123,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
   gap: 4rem;
+  position: relative;
 }
 .product__item {
   padding: 0.8rem;
@@ -183,6 +184,14 @@
 }
 .product__list-link {
   color: #fff;
+}
+.no-result {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: var(--font-3-size);
+  text-align: center;
 }
 /* responsive 850px */
 @media screen and (max-width: 850px) {

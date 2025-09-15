@@ -3,15 +3,17 @@ import ProductsItem from "../compnents/ProductsItem";
 import { useFetch } from "../hooks/useFetch";
 
 function Recipes() {
-  let url = "https://json-api.uz/api/project/recipes/recipes";
-
-  const { data, isPending, error } = useFetch(url);
-
+  // useState
   const [isOpen, setIsOpen] = useState(false);
   const [selected, setSelected] = useState("");
   const [cookOpen, setCookOpen] = useState(false);
   const [cookSelected, setCookSelected] = useState("");
   const [search, setSearch] = useState("");
+
+  // API’dan data olish
+  const { data, isPending, error } = useFetch(
+    "https://json-api.uz/api/project/recipes/recipes"
+  );
 
   // select 1
   function select1() {
@@ -45,16 +47,17 @@ function Recipes() {
         <div className="products__container container">
           <div className="dropdown__container">
             <div className="dropdown__wrapper">
+              {/* Prep Time */}
               <div className="dropdown">
                 <button
                   onClick={() => setIsOpen(!isOpen)}
                   className="dropdown-btn"
                 >
-                  {`${selected && selected + " minutes"}` || "Max Prep Time"}
+                  {selected ? `${selected} minutes` : "Max Prep Time"}
                 </button>
                 {isOpen && (
                   <div className="dropdown-menu">
-                    {[5, 10].map((time) => (
+                    {[5, 10, 15, 20].map((time) => (
                       <label key={time} className="dropdown-option">
                         <input
                           className="custom-radio"
@@ -73,14 +76,13 @@ function Recipes() {
                   </div>
                 )}
               </div>
+              {/* Cook Time */}
               <div className="dropdown">
                 <button
                   onClick={() => setCookOpen(!cookOpen)}
                   className="dropdown-btn"
                 >
-                  {cookSelected !== ""
-                    ? `${cookSelected} minutes`
-                    : "Max Cook Time"}
+                  {cookSelected ? `${cookSelected} minutes` : "Max Cook Time"}
                 </button>
                 {cookOpen && (
                   <div className="dropdown-menu">
@@ -104,6 +106,7 @@ function Recipes() {
                 )}
               </div>
             </div>
+            {/* Search */}
             <input
               onChange={(e) => setSearch(e.target.value)}
               className="product__find-input"
