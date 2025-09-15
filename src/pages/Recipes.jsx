@@ -124,6 +124,7 @@ function Recipes() {
           )}
         </div>
       </section>
+      <div className="become"></div>
     </>
   );
 }

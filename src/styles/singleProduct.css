@@ -1,0 +1,74 @@
+.only {
+  margin-top: 4.8rem;
+  margin-bottom: 6.4rem;
+}
+.only__container {
+  display: flex;
+  gap: 4rem;
+}
+.only__well {
+  font-family: var(--font-nunito);
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1.6rem;
+}
+.only__image {
+  border-radius: 1rem;
+  object-fit: cover;
+}
+.only__title {
+  font-size: var(--font-2-size);
+  margin-bottom: 2rem;
+}
+.only__recipes {
+  opacity: 0.5;
+  word-spacing: 3px;
+  margin-bottom: 1.6rem;
+}
+.only__servic {
+  width: 100%;
+  color: var(--neutral-900);
+  font-size: 1.8rem;
+  flex-wrap: wrap;
+}
+.only__ingredients {
+  font-size: var(--font-4-size);
+  font-family: var(--font-nunito);
+  margin-bottom: 1.6rem;
+}
+
+.only__list {
+  width: 100%;
+  max-width: 572px;
+  margin-bottom: 2rem;
+}
+.only__item {
+  gap: 0.8rem;
+}
+.single__loading {
+  margin-top: 10rem;
+}
+.more {
+  margin-top: 6.4rem;
+  margin-bottom: 9.6rem;
+}
+@media screen and (max-width: 1000px) {
+  .only__container {
+    flex-direction: column;
+  }
+  .only__image {
+    width: 100%;
+  }
+  .only__title {
+    font-size: var(--font-2-mobile-size);
+  }
+}
+@media screen and (max-width: 850px) {
+  .only {
+    margin-bottom: 4.8rem;
+  }
+  .more {
+    margin-top: 4.8rem;
+    margin-bottom: 4.8rem;
+  }
+}
