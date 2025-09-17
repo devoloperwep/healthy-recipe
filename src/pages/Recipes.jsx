@@ -14,7 +14,6 @@ function Recipes() {
   const { data, isPending, error } = useFetch(
     "https://json-api.uz/api/project/recipes/recipes"
   );
-
   // select 1
   function select1() {
     setSelected("");
@@ -53,7 +52,7 @@ function Recipes() {
                   onClick={() => setIsOpen(!isOpen)}
                   className="dropdown-btn"
                 >
-                  {selected ? `${selected} minutes` : "Max Prep Time"}
+                  {String(selected) ? `${selected} minutes` : "Max Prep Time"}
                 </button>
                 {isOpen && (
                   <div className="dropdown-menu">
@@ -82,7 +81,9 @@ function Recipes() {
                   onClick={() => setCookOpen(!cookOpen)}
                   className="dropdown-btn"
                 >
-                  {cookSelected ? `${cookSelected} minutes` : "Max Cook Time"}
+                  {String(cookSelected)
+                    ? `${cookSelected} minutes`
+                    : "Max Cook Time"}
                 </button>
                 {cookOpen && (
                   <div className="dropdown-menu">
